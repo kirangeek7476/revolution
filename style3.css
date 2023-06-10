@@ -1,0 +1,26 @@
+/* Style for the FAQ container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the questions */
+.question {
+  cursor: pointer;
+  color: #333;
+}
+
+/* Style for the answers */
+.answer {
+  display: none;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Style for the search bar */
+#search-bar {
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 100%;
+}
