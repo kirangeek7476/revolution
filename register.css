@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:blanchedalmond;
+}
+.lbox{
+  position: relative;
+  width: 380px;
+  height: 600px;
+  background: rgb(115, 132, 116);
+  border-radius: 8px;
+  overflow: hidden;
+  top: 50px;
+  box-shadow: 5px 5px 50px black;
+}
+.lbox::before
+{
+  content: '';
+  top:-50%;
+  left: -50%;
+  position:absolute;
+  width: 380px;
+  height: 600px;
+  background: linear-gradient(0deg,transparent,#41eb74,#41eb74);
+  animation: animate 6s linear infinite;
+  transform-origin: bottom right;
+
+}
+.lbox::after
+{
+  content: '';
+  top:-50%;
+  left: -50%;
+  position:absolute;
+  width: 380px;
+  height: 600px;
+  background: linear-gradient(0deg,transparent,#41eb74,#41eb74);
+  animation: animate 6s linear infinite;
+  transform-origin: bottom right;
+  animation-delay: -3s;
+  
+}
+@keyframes animate
+{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+.form{
+  position: absolute;
+  inset: 4px;
+  border-radius: 8px;
+  background: rgb(66, 78, 84);
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form h2{
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputbox{
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.inputbox input{
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: aquamarine;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+.inputbox span{
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1.2em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+  color: rgb(127, 255, 212);
+  transform: translateY(-34px);
+  font-size: 0.80em;
+}
+.inputbox i{
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2px;
+border-radius: 4px;
+transition: 0.5s;
+pointer-events: none;
+z-index: 9;
+}
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i
+{
+  background-color: #8f8f8f;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1.3em;
+  color: #8f8f8f;
+}
+.links a{
+  font-size: 1.1em;
+  color: #8f8f8f;
+}
+.links a:hover
+{
+  color: #d0b8b8;
+}
+input[type="submit"]
+{
+  border: none;
+  outline: none;
+  background-color: #8f8f8f;
+  padding: 11px 20px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[type="submit"]:hover{
+  color: antiquewhite;
+  background-color:rgb(66, 48, 48);
+}
+.title{
+  position: absolute;
+  top: 25px;
+  font-size: 35px;
+}
+.desc{
+  font-size: 22px;
+  position: relative;
+  top: -20px;
+  left: 70px;
+}
